@@ -1,0 +1,4455 @@
+@import url('https://fonts.cdnfonts.com/css/torus-notched');
+
+ *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Torus Notched';
+    box-sizing: border-box;
+}
+
+
+h1,h2,h3,h4,h5,button,p{
+    font-family: 'Torus Notched';
+}
+
+
+
+/* body */
+
+
+
+body{
+    
+    background: linear-gradient(45deg,rgba(155, 160, 159, 0.925), rgb(255, 81, 0));;
+    font-family: 'Torus Notched';
+    background-image: cover;
+}
+
+
+
+/* rendre la navigation entre les section plus smooth */
+html{
+  scroll-behavior: smooth;
+
+  
+}
+
+/* modifer la barre de scrolle pour la rendre plus belle */
+
+body::-webkit-scrollbar{
+  width: 12px;
+  
+}
+
+body::-webkit-scrollbar-track{
+  background-color: rgb(8, 8, 8);
+}
+body::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 5px;
+  height:50px;
+ 
+}
+body::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(255, 60, 0);
+}
+
+
+/* ---------------------------bouton defilement en haut*/
+
+.defilement {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(241, 82, 33);
+  top: 80vh;
+  right: 0;
+  margin-right:20px ;
+  position: fixed;
+  border-radius: 10px;
+  animation: up 1s infinite ease ;
+  
+  
+}
+
+.defilement:hover{
+  background-color: rgba(204, 191, 183, 0.466);
+  transition: 0.s ease;
+  transform: scale(1.1);
+}
+
+
+.defilement img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+
+}
+
+
+@keyframes up{
+  0%{
+      /* transform: scaleY(50%); */
+      transform: translateY(0%);
+
+  }
+  
+  50%{
+      transform: translateY(10%);
+
+      /* transform: scaleY(100%); */
+
+  }
+
+ }
+
+ /* ---------------------------fin  bouton defilement en haut*/
+
+
+/* ----------------------------------------------page lacation----------------------------- */
+
+.page-location.ouvert{
+
+  display: flex;
+}
+
+.page-location{
+   position: fixed;
+   padding: 50px 0;
+   z-index: 100;
+   width: 100%;
+   height: 100vh;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   background-color: #2c3442ea;
+   transition: 1.1s ease;
+   
+}
+
+
+
+
+.page-location .directive{
+margin: 0 auto;
+width: 70%;
+position: absolute;
+background-color: rgba(219, 200, 200, 0);
+display: flex;
+padding: 10px;
+justify-content: space-between;
+
+
+}
+
+/* croix */
+
+.directive .croix{
+  width: 30px;
+  height: 30px;
+  padding:2px;
+  background-color: red;
+  border-radius: 20px;
+  transition: 0.1s ease;
+}
+
+.directive .croix:hover{
+  transform: scale(1.1);
+}
+/* manipulation */
+
+ .page-location .manipulation{
+  /* background-color: rgba(15, 6, 1, 0.164) ; */
+  background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+/* photo */
+
+.manipulation .photo{
+  width:40% ;
+  height: 40%;
+ 
+}
+.photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/* info manu */
+
+.infomanu{
+ 
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.infomanu .prix{
+  font-size: 20px;
+color: rgb(224, 114, 24);
+}
+
+.infomanu .cars{
+ 
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.infomanu .car .entete{
+ color: rgb(224, 99, 26);
+}
+
+.infomanu .car{
+  text-align: center;
+}
+
+.infomanu .car p{
+  color:rgba(255, 255, 255, 0.932) ;
+  font-weight: 100;
+}
+
+/* ajuster la location */
+
+.manipulation .ajuster{
+
+  width: 90%;
+  margin: 10px 0;
+ padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.ajuster .ajuste{
+   padding: 5px 30px;
+   background-color: beige;
+   color: white;
+ 
+}
+
+.ajuste img{
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+}
+
+.nombrejour{
+
+display: block;
+text-align: center;
+width: 100%;
+color: rgb(255, 255, 255);
+font-size: 17px;
+}
+
+/* formulaire du loc */
+
+/* message d'alerte a la soumission */
+.form-location .succer{
+  /* background-color: white; */
+  color: rgb(15, 255, 15);
+  font-size: 20px;
+  display: none;
+
+}
+.form-location .succer.val{
+  display: flex;
+}
+
+.succer1{
+  /* background-color: white; */
+  color: rgb(15, 255, 15);
+  font-size: 20px;
+  display: none;
+  margin:  0 20% auto;
+
+
+}
+.succer1.val1{
+  display: flex;
+}
+
+.form-location{
+ 
+  background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 1px rgba(32, 30, 30, 0.836);
+
+
+}
+
+.form-location h2{
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.959);
+}
+
+.form-location form{
+ 
+  
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loc{
+  /* background-color: gold; */
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.loc input{
+  padding: 10px 50px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 2px solid rgba(236, 106, 0, 0.822);
+}
+
+.loc label{
+  font-size: 15px;
+  color: #e2deccf1;
+  margin-bottom: 5px;
+}
+
+.loc ::placeholder {
+  color: rgba(236, 236, 236, 0.664);
+}
+
+.submit-loc{
+  margin: 10px 0;
+  padding: 10px 60px;
+  background-color: rgba(219, 114, 16, 0.863);
+  outline: none;
+  border: none;
+  color:rgba(255, 255, 255, 0.664)
+  
+}
+
+.submit-loc:hover{
+  background: #2c3442;
+  color: beige;
+}
+
+/*  ---------------------------------------------Fin page location ----------------------------*/
+
+
+
+
+
+/* la fleche  */
+
+img.fleche{ 
+ 
+  width: 100px;
+  height:100px;
+  animation: fleche 1s infinite ease ;
+  
+  }
+
+
+  @keyframes fleche{
+    0%{
+        /* transform: scaleY(50%); */
+        transform: translateY(0%);
+
+    }
+    
+    50%{
+        transform: translateY(20%);
+
+        /* transform: scaleY(100%); */
+
+    }
+
+   }
+
+
+
+                 /* --------------------------PARTIE 1 HEADER + NAV BAR----------------- */
+
+
+
+                 
+/* nav bar  */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 50px;
+    align-items: center;
+    background-color:rgb(95, 226, 215);
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: black;
+    
+}
+
+nav ul{
+    display: flex;
+
+}
+
+nav ul li{
+    margin-right: 50px;
+}
+
+nav  a{
+ 
+color: black;
+font-size: 15px;
+  
+   
+}
+
+nav li a:hover{
+    color:  rgb(255, 81, 0);
+    border-bottom: 2px solid   rgb(255, 81, 0);
+    transition: 0.1s ease;
+    
+}
+
+.home{
+    color: rgb(255, 81, 0) ;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav .logo a{
+   color: black;
+    font-size: 20px;
+    margin-left:10px ;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+
+/* login */
+
+nav .login{
+   
+   
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+nav .connect{
+    
+    font-size: 15px;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: white;
+    
+}
+
+nav .inscrire:hover{
+    background-color:  rgb(255, 81, 0);
+    color: white;
+    
+}
+
+nav .inscrire{
+   
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid   rgb(255, 81, 0);
+    color: rgb(255, 81, 0);
+}
+nav .connect:hover{
+    color:   rgb(255, 81, 0);
+    transition: 0.1s ease;
+}
+
+.menu-burgeur{
+  width: 40px;
+  height: 50px;
+  display: none;
+}
+
+/* header */
+
+header{
+  
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  font-family: 'Torus Notched';
+  
+}
+
+/* baniere */
+
+/* backdrop filter certain navigateur peuvent ne pas l'accepter */
+
+.baniere{
+    backdrop-filter: blur(15px); 
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 40px 40px ;
+    
+}
+
+
+.baniere h1{
+    font-size: 35px;
+    margin-left: 10px;
+    font-family: 'Torus Notched';
+}
+
+.baniere img{
+    width: 70px;
+    height: 70px;
+    
+}
+
+
+
+.droite{
+    text-align: center;
+}
+.droite p{
+    font-size: 15px;
+    float: right;
+    font-weight: bold;
+    color: rgb(95, 226, 215);
+    
+}
+
+
+
+/* SLIDEE */
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+    
+  }
+  
+    div.slides {
+      display: flex;
+      flex-direction: row;
+      animation: glisse 10s infinite ease;
+      
+    }
+  
+   .slide img{
+      object-fit: cover;
+      height: 100vh;
+    }
+
+
+
+    /* saissie */
+
+    header .trouver{
+       background-color: rgba(230, 84, 17, 0.911);
+       position: absolute   ; 
+       bottom:-60px;
+       z-index: 1;
+       width: 65%;
+       padding: 20px;
+       height: 110px;
+       border: 1px solid rgba(13, 235, 224, 0.171);
+      box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.651);
+    }
+    
+    .trouver form{
+      width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .trouve input{
+       
+        padding: 10px 30px;
+        background-color: transparent;
+        border: 2px solid rgb(95, 226, 215);
+        outline: none;
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+
+        
+    }
+
+    .trouve input:hover{
+        border: 2px solid black;
+    }
+
+    ::placeholder{
+        color: rgb(255, 255, 255);
+        
+    }
+
+    .trouve {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin: 0 5px;
+    }
+
+    .trouve label{
+        font-size: 15px;
+        margin-bottom: 12px;
+        color: white;
+    }
+
+    /* bouton saisie */
+
+    .btn{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border:2px solid  rgb(95, 226, 215);
+        background-color: rgb(95, 226, 215);
+        font-size: 1.2em;
+        color:  black;
+        z-index: 2;
+        overflow: hidden;
+        margin-top: 30px;
+        font-family: 'Torus Notched';
+        
+            
+    }
+    .btn:hover{
+        color:white;
+        width: 165px;
+        transition: 0.5s;
+        border: none;
+    }
+   
+    
+    .btn::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        background-color:black;
+        font-size: 1.5em;
+        top:-2px;
+        left: -2px;
+        transform: translate(-100%);
+        transition: 0.2s;
+        z-index: -1;
+            
+    }
+    
+    .btn:hover::before{
+        transform: translate(0%);
+        transition: 0.4s;
+        border: none;
+  
+    }
+    
+    
+     .btn i{
+        transform: scale(0);
+        margin: -5px;
+        transition: 0.2s;
+    }
+    
+     .btn:hover i{
+       
+        transform: scale(1);
+        margin-left: 10px;
+    }
+    
+  
+    @keyframes glisse{
+       0% {
+      transform: translateX(0%);
+    }
+
+
+       10% {
+      transform: translateX(10%);
+    }
+
+    30% {
+        transform: translateX(30%);
+      }
+
+      60% {
+        transform: translateX(-10%);
+      }
+      80% {
+        transform: translateX(-30%);
+      }
+    100% {
+      transform: translateX(0%);
+    }
+    }
+    
+
+
+     /* -----------------------FIN      PARTIE 1 HEADER + NAV BAR----------------- */
+
+
+   
+
+      /* --------------------------PARTIE 2 SECTION 1----------------- */
+
+
+
+      section{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        color: white  ;
+        font-family: 'Torus Notched';
+        text-align: center;
+    }
+
+        
+    /* SECTION 1 */
+
+    .section1{
+        padding-top: 30px 0;
+        margin-top: 200px;
+        
+     }
+
+     /* DIV 1 DE LA SECTION1 */
+   section .sec1{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 90%;
+   margin: 0 auto;
+
+}
+
+/* article DU DIVE SEC1 */
+
+section .article1{ 
+    width: 50%;
+    height: 40vh;
+    border-radius: 200px;
+    margin-bottom: 50px;
+  
+     }
+
+     /* ARTICLE HOVER */
+
+.article1 img:hover{
+    transform: scale(1.1);
+    border-radius: 150px;
+    transition: all .3s ease;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0);
+}
+
+.sec1 h1{
+    font-size: 40px;
+    font-weight: 600;
+  
+}
+
+
+
+.sec1 img{
+    width: 80%;
+    height: 50vh;
+    border-radius: 200px; 
+    box-shadow: 5px 5px 15px  rgba(230, 84, 17, 0.911);
+}
+
+
+/* description */
+
+.description span{
+    color:rgb(95, 226, 215);
+}
+
+.description{
+    
+    font-size: 25px;
+    color:  black;
+    margin: 60px auto;
+    line-height: 40px;
+    width: 70%;
+    text-align: center;
+    
+}
+
+/* --------------------------Fin PARTIE 2 SECTION 1----------------- */
+
+  
+
+ /* --------------------------PARTIE 3 SECTION 2----------------- */
+
+
+.section2{
+   padding: 50px 0;
+  
+ }
+
+ .section2 h1{
+    color:black ;
+    margin: 70px 0;
+    font-size: 50px
+ }
+
+
+.section2 .sec2{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+
+/* items */
+ 
+.sec2 .items{
+   
+    width: 30%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+    box-shadow: 5px 5px 5px rgba(128, 12, 12, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s;
+
+}
+
+/* hover items */
+
+.items:hover{
+    transform: scale(0.98);
+ border-radius: 30px;
+ box-shadow: 0px 0px 20px 1px rgb(97, 50, 38);
+}
+
+/* image items */
+
+.items img{
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: ;
+    
+}
+
+/* info items */
+
+.items .info-items{
+ width: 100%;
+height: 35%;
+background-color:rgba(233, 233, 233, 0.829);
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+
+
+}
+
+/* car  (marque , puissance , modele*/
+
+.info-items .cars{   
+    display: flex;
+    height: 40%;
+    justify-content: center;
+  
+    
+
+}
+
+/* pour chacun d'eux dic puissance modele et marque */
+
+.cars .car{
+    width: 30%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+
+}
+
+.car .entete{
+    font-size: 17px;
+    margin: 10px 0;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.863);
+   
+
+}
+.car p{
+    font-weight: bold;
+    color: rgba(230, 84, 17, 0.911);
+}
+
+/* valider avec prix et bouton louer */
+
+
+.valider{
+    padding: 10px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:rgba(0, 0, 0, 0.863);
+    font-weight: bold;
+    
+}
+
+.valider p{
+ font-size: 20px;
+ margin-bottom:20px ;
+ 
+}
+/* boutton louer   */
+
+.achat{
+    width: 70%;
+    height: 40%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: rgba(32, 28, 25, 0.911);
+   
+}
+
+.achat:hover{
+    background-color:  #eb6111;
+    color: rgba(20, 20, 18, 0.897);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 0px 2px #704217, 0px 0px 0px 2px  rgba(230, 84, 17, 0.911);
+   
+}
+
+/* prix */
+
+.prix{
+    color: rgba(230, 84, 17, 0.911);;
+}
+
+/* --------------------------Fin   PARTIE 3 SECTION 2----------------- */
+
+
+
+/* --------------------------PARTIE 4 SECTION 3----------------- */
+
+
+
+
+.section3{
+    height: 100%;
+    margin-bottom: 50px;
+    
+   }
+  
+   .section3 h1{
+      color:black ;
+      margin: 100px 0;
+      font-size: 50px;
+      
+      
+   }
+  
+  
+  .section3 .sec3{
+      
+      align-items: center;
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      padding-top: 20px ;
+  
+  }
+
+  /* aside bloque gauche pour une prensation et description */
+
+.aside{
+    margin: 20px auto;
+    width: 90%;
+    height: 300px;
+    background: linear-gradient(170deg, rgba(219, 219, 219, 0.623) 0%, rgb(31, 31, 31) 100%);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 10px 18px #2c3442;
+  }
+
+
+  .aside-logo{
+     background-color:rgb(228, 102, 28); 
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    font-size: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+  }
+  .aside-logo img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .aside-logo a{
+    margin-left: 10px;
+    color: black;
+  }
+
+  .aside p{
+    width: 80%;
+    margin: 50px auto;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+   
+  }
+
+
+  .pack{
+    
+    margin-top: 200px ;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    flex-wrap: wrap;
+    
+  }
+
+  /*  bloque de chaque pack premium bussines et eco */
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+ 
+   
+
+  }
+  
+  .card_box {
+
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    cursor: pointer;
+    transition: all .3s;
+  
+  }
+  
+  .card_box:hover {
+    transform: scale(1.1);
+  }
+  
+  .card_box span {
+    position: absolute;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* premium */
+  
+  .card_box .span1::before {
+    content: 'Premium';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb444  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  
+  /* busness */
+
+    
+  .card_box .span2::before {
+    content: 'BUSINESS';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff4d47 0%, #fa432b  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+
+  /* ECON */
+
+    
+  .card_box .span3::before {
+    content: 'ECO';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ff7044  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+
+
+  .card_box span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+
+
+  /* contenu du pack */
+
+  .card_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around; 
+    cursor: pointer;
+  
+  }
+
+
+  /* CONTENU DU PACK */
+  
+  .content {
+    padding: 20px;
+    
+   
+  }
+  
+
+  /* prix des  pack */
+
+  .content .price {
+    color: white;
+    font-weight: 800px;
+    font-size: 35px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+  }
+  
+  /* contenu contenant les trois Option */
+
+
+  .content .description {
+    color: rgba(255, 255, 255, 0.719);
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+   
+
+
+  }
+
+  /* descrip dic des 3  */
+
+  .description .descrip{
+   
+    display: flex;
+    width:  100%;
+    flex-direction: column;
+   
+
+  }
+
+
+  /* offre div de chaque option */
+
+  .descrip .offre{
+    
+    margin: 10px 0;
+    width: 100%;
+  
+    
+  }
+
+  /* nom de l'option */
+
+  .offre p{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+
+  .offre .yes{
+    
+   color: green;
+    font-size: 20px;
+    
+   
+  }
+
+
+  .offre .non{
+    color: red;
+    font-size: 20px;
+   
+  } 
+  
+  /* titre du pack */
+  .content .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  /* bouton du pack */
+  .button-pack {  
+     border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.904);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size:  13px;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(230, 84, 17, 0.911);
+    /* border-radius: 0.5rem; */
+    width: 80%;
+    margin-bottom: 30px;
+    
+  }
+  
+  .button-pack:hover{
+    background-color:  #b8280fe5;
+    /* font-size: 20px; */
+    color: rgba(245, 245, 220, 0.897);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 0px 2px #bb4d1298, 0px 0px 0px 2px  rgba(230, 84, 17, 0.911);
+  }
+
+
+  /* -------------------------------FIN Partie 4 SECTION 3   PACK-------------------------- */
+
+
+  /* -----------------------------------DEBUT partie 5 SECTION 4  CONTACT--------------------------- */
+
+
+  .section4{
+    height: 100%;
+    padding-bottom:100px ;
+   
+   }
+  
+   .section4 h1{
+      color:black ;
+      margin-bottom: 100px;
+      font-size: 60px;
+      
+      
+   }
+  
+  
+  .section4 .sec4{
+     background: linear-gradient(170deg, rgba(238, 80, 7, 0.623) 0%, rgba(32, 8, 8, 0.76) 100%);
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 100px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding:  100px;
+      
+
+  }
+
+
+
+  /* formulaire */
+
+  .sec4 .formulaire{
+    width: 40%;
+    background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow:1px 1px 10px 1px rgb(0, 0, 0);
+    height: 550px;
+
+  
+  }
+
+  .formulaire h2{
+    font-size: 30px;
+    text-transform:uppercase ;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .formulaire .form{
+
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  ::placeholder{
+    text-align: center;
+    color: rgba(233, 218, 218, 0.397);
+    
+
+  }
+
+  .form input{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid rgba(211, 205, 202, 0.884);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .form input:hover{
+     border-color: rgb(231, 79, 8);
+     transform: scale();
+  }
+
+  .form label{
+    font-size: 17px;
+    color: #cdd7e7;
+    margin-bottom: 0px;
+    text-align: left;
+    
+  }
+
+
+  .formulaire .submit{
+    padding:10px 50px;
+    background-color: #FF512F;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color:  #ccd4e2;
+  }
+
+  .submit:hover{
+    background-color:  #b8280fe5;
+    font-size: 20px;
+    color: rgba(245, 245, 220, 0.692);
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 0px 2px #f1631198, 0px 0px 0px 2px  rgba(230, 84, 17, 0.911);
+
+  }
+
+  /* contact */
+
+  .sec4 .carte{
+    
+    width: 50%;
+    height: 550px;
+    box-shadow: 1px 1px 20px 3px #00000098, 0px 0px 0px 2px  rgba(230, 84, 17, 0.911);
+
+    
+
+  }
+
+  .carte iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+  
+ 
+  }
+
+  /* ---------------------fin partie 5 section 4  contact--------------- */
+
+
+  /* -------------------------------Partie 6 section 5   A propos-------------------- */
+
+
+  .section5{
+    height: 100%;
+     background-color: #f1613d1f; 
+     
+    padding:0 50px;
+    z-index: 20;
+     /* margin-bottom: 100px;  */
+    padding-bottom:100px ;
+    box-shadow: 1px 1px 15px 5px black;
+  
+   }
+  
+   .section5 h1{
+      color:rgb(241, 59, 27) ;
+      margin-bottom: 50px;
+      font-size: 60px;
+      
+   }
+
+
+   .sec5{
+    /* background-color: #2c3442; */
+    padding:0 20px;
+   }
+
+   .sec5 .propos{
+    color: rgba(2, 2, 2, 0.938);
+    font-weight: 300;
+    line-height: 40px ;  
+    font-size: 17px;
+    margin: 0 auto;
+    
+   }
+  
+   .propos span{
+    color: #f13413;
+   }
+
+
+   /* --------------------------fin partie 6 section5  A propos    */
+
+
+   /* -------------- ------------------pied de page footer---------- */
+
+   footer{
+    background-color: #2c3442;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  padding: 20px 0;
+   }
+
+   footer .pied{
+    width:  70%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+   }
+
+
+   footer .footer-logo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   }
+
+   .footer-logo img{
+    width: 70px;
+    height: 70px;
+   }
+
+   .footer-logo a{
+    font-size: 30px;
+    color: black;
+    margin-left: 10px;
+   }
+
+   /* div contenant les lien */
+
+   footer .lien{
+    width: 50%;
+    padding: 10px ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   footer p{
+    color: rgba(255, 255, 255, 0.685);
+   }
+
+   .lien p{
+    text-align: center;
+   }
+
+
+   .footer-icone{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+   }
+
+   .footer-icone img{
+    width: 30px;
+    height: 30px;
+    margin: 5px 20px;
+   }
+
+   .footer-icone img:hover{
+    transform: scale(1.2);
+   }
+
+
+
+   /* -------------------------------fin footer--------------------------- */
+
+
+
+   /* -----------------------------------responsive partie--------------------------------- */
+
+
+   @media screen and (max-width:1350px) {
+ 
+
+
+/* ---------------------------bouton defilement en haut*/
+
+.defilement {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(241, 82, 33);
+  top: 80vh;
+  right: 0;
+  margin-right:15px ;
+     
+}
+
+    /* partie location */
+
+
+    
+    /* photo */
+    
+    .manipulation .photo{
+      width:35% ;
+      height: 35%;
+     
+    }
+    .photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 40px;
+    }
+    
+    /* info manu */
+    
+    
+    .infomanu .cars{
+      margin: 15px;
+    }
+    
+    
+    /* ajuster la location */
+    
+    
+    .ajuster .ajuste{
+       padding: 5px 25px;
+     
+    }
+    
+    
+    /* formulaire du loc */
+ 
+    
+    .form-location h2{
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+      color: rgba(235, 98, 19, 0.884);
+    }
+    
+    
+    .loc{
+      /* background-color: gold; */
+      margin: 5px 0;
+      
+    }
+    
+    .loc input{
+      padding: 10px 40px;
+      
+    }  
+    .loc ::placeholder {
+      color: rgba(236, 236, 236, 0.664);
+    }
+    .submit-loc{
+      margin: 10px 0;
+      padding: 10px 50px;  
+    }
+    
+  
+
+    /* fin partie location */
+
+    /* SECTION 3  PARKING */
+
+
+  /* items */
+ 
+.sec2 .items{
+   
+  width: 29%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 20px;
+  box-shadow: 5px 5px 5px rgba(114, 10, 10, 0.404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .3s;
+
+}
+
+
+/* image items */
+
+.items img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+ 
+  
+}
+
+/* info items */
+
+.items .info-items{
+width: 100%;
+height: 40%;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+
+
+}
+
+/* car  (marque , puissance , modele*/
+
+.info-items .cars{
+  display: flex;
+  height: 45%;
+  justify-content: center;
+ 
+  
+
+}
+
+/* pour chacun d'eux dic puissance modele et marque */
+
+.cars .car{
+ width: 100%;
+  height: 100%;
+ 
+
+}
+
+.car .entete{
+  font-size: 17px;
+  margin: 10px 0;
+  font-weight: 400;
+  color:rgba(0, 0, 0, 0.863);
+ 
+
+}
+.car p{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(230, 84, 17, 0.911);
+}
+
+/* valider avec prix et bouton louer */
+
+
+.valider{
+  padding: 10px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:rgba(0, 0, 0, 0.863);
+  font-weight: bold;
+  
+  
+
+}
+
+.valider p{
+font-size: 20px;
+margin-bottom:10px ;
+
+}
+/* boutton louer   */
+
+.achat{
+  width: 70%;
+  height: 35%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: rgba(32, 28, 25, 0.911);
+ 
+}
+
+/* prix */
+
+.prix{
+  color: rgba(230, 84, 17, 0.911);
+  font-size: 20px;
+}
+
+ /* FIN   SECTION 3  PARKING */
+
+}
+
+
+/* ---------------------------------responsive   max-width:1085px------------------------------ */
+
+
+
+@media screen and (max-width:1085px){
+
+/* ---------------------------bouton defilement en haut*/
+
+.defilement {
+  
+    width: 45px;
+    height: 45px;
+    background-color: rgb(241, 82, 33);
+    top: 80vh;
+    right: 0;
+    margin-right:15px ;
+       
+  }
+     
+
+
+   /* partie location */
+
+   .page-location .directive{
+    margin: 0 auto;
+    width: 100%;
+   
+    }
+    
+    
+    /* fin partie location */
+
+/* FLECHE */
+
+img.fleche{
+  margin: 10px 0;
+  width: 40px;
+  height: 65px;
+ }
+
+
+
+  /* section */
+
+  .section2{
+    padding: 10px 0;
+   
+    
+    
+   }
+   .section2 h1{
+     margin: 50px 0; 
+    font-size: 50px
+ }
+ 
+  
+ .section3 h1{
+  margin: 50px 0;
+  font-size: 50px
+ }
+
+ .section3{
+  margin-bottom: 20px;
+ }
+
+
+  /* fin section */
+
+  /* NAVBAR */
+
+
+  nav{
+    padding: 10px 20px;
+    align-items: center;
+    background-color:rgb(95, 226, 215);
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    color: black;
+    
+}
+
+
+nav ul li{
+    margin-right: 30px;
+}
+
+nav  a{
+
+font-size: 15px;
+    
+}
+
+.home{
+    color: rgb(255, 81, 0) ;
+}
+
+nav .logo a{
+   color: black;
+    font-size: 20px;
+    margin-left:5px ;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+
+/* login */
+
+nav .login{
+   
+    height: 30px; 
+}
+
+nav .connect{
+    
+    font-size: 15px;
+    padding: 5px 10px;
+  
+    
+}
+
+
+nav .inscrire{
+   
+    font-size: 15px;
+    padding: 5px 10px;
+   
+    
+}
+
+
+  /* FIN NAVBAR */
+
+/* header */
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  align-items: center;
+  font-family: 'Torus Notched';
+
+}
+
+
+/* fin header */
+
+
+
+  /* BANIERE */
+
+  .baniere{
+    backdrop-filter: blur(15px);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+      
+  }
+  
+  .baniere h1{
+      font-size: 30px;
+      margin-left: 10px;
+  
+  }
+  
+  .baniere img{
+      width: 50px;
+      height: 50px;
+     
+  }
+ 
+  .droite p{
+      font-size: 15px;
+  
+  }
+  
+  /* FIN BANIERE */
+
+/* SLIDE */
+
+
+.slide img{
+  object-fit: cover;
+  height: 60vh;
+}
+
+
+/* FIN SLIDE */
+
+  /* SAISSIE MARQUE MODELE LOCALITE */
+
+  header .trouver{
+
+   display: flex;
+   justify-content: space-between;
+    top: 60vh;
+    width: 60%;
+    height: 100px;
+    border: 1px solid rgba(13, 235, 224, 0.171);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.651);
+   
+ }
+  
+  .trouver form{
+    width: 100%;
+ } 
+
+ .trouve input{
+    
+     padding: 5px 20px;
+    
+ }
+
+ .trouve {
+   
+     width: 100%;
+     margin: 0 5px;
+ }
+
+ .trouve label{
+     font-size: 15px;
+     margin-bottom: 15px;
+     color: white;
+ }
+
+
+ .btn{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border:1px solid  rgb(95, 226, 215);
+  background-color: rgb(95, 226, 215);
+  font-size: 1.2em;
+  color:  black;
+  z-index: 2;
+  overflow: hidden;
+  margin-top: 35px;
+  font-family: 'Torus Notched';
+  
+     
+}
+
+ /* bouton saisie */
+     
+
+ 
+ .btn:hover{
+     color:white;
+     width: 100%;
+     font-size: 15px;
+   
+ }
+
+
+  /* FIN SAISSIE MARQUE MODELE LOCALITE*/
+
+
+
+  /* SECTION 1 */
+
+    /* SECTION 1 */
+
+    .section1{
+      padding-top: 50px 0;
+      margin-top: 100px;
+      margin-top: 200px;
+      
+   }
+
+   /* DIV 1 DE LA SECTION1 */
+ section .sec1{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ width: 90%;
+ margin: 0 auto;
+
+}
+
+/* article DU DIVE SEC1
+*/
+
+section .article1{ 
+  width: 50%;
+  height: 30vh;
+  border-radius: 250px;
+  margin-bottom: 60px;
+
+   }
+
+.sec1 h1{
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.sec1 img{
+  width: 80%;
+  height: 40vh;
+}
+
+.description{
+   margin-top: 20px; 
+  font-size: 20px;
+
+}
+
+  /* FIN SECTION 1 */
+
+
+
+   /* SECTION 3  PARKING */
+
+  /* items */
+
+.sec2 .items{
+   
+  width: 40%;
+  height: 500px;
+
+}
+
+/* image items */
+
+.items img{
+  width: 100%;
+  height: 65%;
+ 
+
+}
+
+/* info items */
+
+.items .info-items{
+width: 100%;
+height: 35%;
+
+
+}
+
+.car .entete{
+  font-size: 17px;
+  margin: 10px 0;
+}
+.car p{
+  font-size: 14px;
+ 
+}
+
+/* boutton louer   */
+
+.achat{
+  width: 60%;
+  margin-top: 10px;
+ 
+}
+
+ /* FIN   SECTION 3  PARKING */
+
+
+ /* parti aside section 3 */
+
+
+
+ /* aside bloque gauche pour une prensation et description */
+
+.aside{
+  margin: 20px auto;
+  width: 80%;
+  height: 300px;
+ 
+ 
+}
+
+
+.aside-logo{
+  width: 100%;
+  height: 80px;
+  font-size: 20px;
+
+}
+.aside-logo img{
+  width: 50px;
+  height: 50px;
+}
+
+.aside p{
+  width: 90%;
+  margin: 50px auto;
+  line-height: 35px;
+ font-size: 18px;
+  
+ 
+}
+
+/* ----------------------pack formule */
+
+
+
+.pack{
+  margin-top: 100px ;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  flex-wrap: wrap;
+  
+}
+
+/*  bloque de chaque pack premium bussines et eco */
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  margin: 30px 0;
+ 
+}
+
+.card_box {
+
+  
+  width: 300px;
+  height: 410px;
+ 
+
+}
+
+.card_box:hover {
+  transform: scale(1.1);
+}
+
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+ 
+}
+
+/* premium */
+
+.card_box .span1::before {
+  content: 'Premium';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+ 
+}
+
+/* busness */
+
+  
+.card_box .span2::before {
+  content: 'BUSINESS';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+
+}
+
+/* ECON */
+
+  
+.card_box .span3::before {
+  content: 'ECO';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+
+}
+
+
+.card_box span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+ 
+}
+
+
+/* contenu du pack */
+
+
+
+/* CONTENU DU PACK */
+
+.content {
+  padding: 5px;
+  height: 250px;
+ 
+}
+
+
+/* prix des  pack */
+
+.content .price {
+  color: white;
+  font-weight: 800px;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* contenu contenant les trois Option */
+
+
+.content .description {
+  margin-top: 0px;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+
+/* offre div de chaque option */
+
+.descrip .offre{
+  
+  margin: 5px 0;
+  width: 100%; 
+}
+
+/* nom de l'option */
+
+.offre p{
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+.offre .yes{
+  
+ color: green;
+  font-size: 17px;
+  
+ 
+}
+
+
+.offre .non{
+  color: red;
+  font-size: 17px;
+ 
+} 
+
+/* titre du pack */
+.content .title {
+  font-weight: 800;
+  margin-top: 10px;
+}
+/* bouton du pack */
+.button-pack {  
+   border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.904);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  13px;
+  padding: 0.70rem 1.2rem;
+  background-color: rgba(230, 84, 17, 0.911);
+  width: 70%;
+  margin: 20px 0;
+  
+}
+
+
+ /*  Fin  parti aside section 3 */
+
+
+ /* -----------------------section 4 CONTACT ET FORMULAIRE  */
+ 
+ 
+
+ .section4{
+  height: 100%;
+ 
+ }
+
+ .section4 h1{
+    color:black ;
+    margin-bottom: 100px;
+    font-size: 50px;
+    
+    
+ }
+
+
+.section4 .sec4{
+   background: linear-gradient(170deg, rgba(238, 80, 7, 0.623) 0%, rgba(32, 8, 8, 0.76) 100%);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding:  50px 0;
+    
+}
+
+/* formulaire */
+
+.sec4 .formulaire{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px 0;
+  
+}
+
+form{
+  width: 80%;
+}
+
+.formulaire h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.formulaire .form{
+  width: 100%; 
+  
+}
+
+
+/* contact */
+
+.sec4 .carte{
+  
+  width: 70%;
+  height: 550px;
+ 
+}
+
+ /*  -------------------- FIN   section 4 CONTACT ET FORMULAIRE  */
+
+
+ /* FOOTER */
+
+ .footer-logo img{
+  width: 35px;
+  height: 35px;
+ }
+
+ .footer-logo a{
+  font-size: 20px;
+  color: black;
+  margin-left: 5px;
+ }
+ /* FIN FOOTER */
+
+}
+
+
+
+/* soumission du projet au niveau du chekpoint html et css . il reste la partie js avec la responsivité 
+nav bar menu humberguer
+page de validation de la  location au clique  
+avec l'affichage de la somme dans le nav bar*/
+
+
+
+
+
+/* ------------------------------------------responsive 750px-------------- */
+
+@media  screen and (max-width:750px) {
+ 
+
+  /* ---------------------------bouton defilement en haut*/
+
+.defilement {
+  
+    width: 40px;
+    height: 40px;
+    background-color: rgb(241, 82, 33);
+    top: 80vh;
+    right: 0;
+    margin-right:10px ;
+       
+  }
+     
+
+
+   /* partie location */
+
+   .page-location .directive{
+    margin: 0 auto;
+    width: 100%;
+   
+    }
+    
+  
+    /* info manu */
+    
+    
+    .infomanu .cars{
+      margin:  10px;
+    }
+
+
+    .infomanu .car p{
+      font-size: 15px;
+    }
+
+    
+    /* ajuster la location */
+    .ajuster .ajuste{
+       padding: 5px 20px;
+     
+    }
+    
+    .infomanu .prix{
+      margin: 10px;
+    }
+    
+    /* formulaire du loc */
+ 
+    
+    .form-location h2{
+      text-align: center;
+      font-size: 15px;
+      margin: 20px 0;
+      color: rgba(235, 98, 19, 0.884);
+    }
+    
+    
+    .loc{
+      /* background-color: gold; */
+      margin: 5px 0;
+      
+    }
+    
+    .loc input{
+      padding: 10px 40px;
+      font-size: 12px;
+      
+    } 
+
+    .loc ::placeholder {
+      color: rgba(236, 236, 236, 0.664);
+    }
+    .submit-loc{
+      margin: 10px 0;
+      padding: 10px 50px;  
+    }
+    
+    .loc label{
+      font-size: 12px;
+    }
+  
+
+    /* fin partie location */
+ 
+ /* -----------NAV */
+
+  nav{
+    height: 35px;
+    justify-content: space-between;
+  } 
+  
+  /* ------------logo */
+  
+
+  nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav .logo a{
+   color: black;
+    font-size: 10px;
+    margin-left:5px ;
+}
+.logo img{
+    width: 20px;
+    height: 20px;
+}
+
+
+/* login */
+
+
+
+nav .login{ 
+  height: 20px;
+  display: flex;
+  align-items: center;
+ 
+
+}
+
+nav .connect{
+  
+  font-size: 10px;
+  /* background-color: red; */ 
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: ;
+  padding: 0;
+  width: 45%;
+
+  
+}
+
+
+
+nav .inscrire{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 10px;
+   border: none;
+
+  /* background-color: #704217; */
+
+}
+
+.menu-burgeur{
+  display: flex;
+  margin-left: 20px;
+  width: 25px;
+height: 50px;
+}
+  
+  /*------------ NAVLINK--------------- */
+  
+  .login i{
+    width: 20px;
+    height: 20px;
+   
+    fill: #2c3442;
+  }
+  .navlink {
+ position: absolute;
+ width: 120px;
+ height: 0;
+ background-color: #c5ab9de8;
+ margin-top:170px;
+ z-index: 20;
+ right: 10px;
+ overflow: hidden;
+ border-radius: 10px;
+
+
+
+}
+
+.navlink.open{
+  height: 130px;
+  padding: 10px 0;
+}
+
+
+.navlink ul li{
+  margin: 5px 0;
+
+}
+
+.navlink a{
+  font-size: 12px;
+}
+
+
+.navlink ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* -------------------header-------------------- */
+
+
+
+header{
+  
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  align-items: center;
+  font-family: 'Torus Notched';
+  
+}
+
+/* baniere */
+
+/* backdrop filter certain navigateur peuvent ne pas l'accepter */
+
+.baniere{
+  background: linear-gradient(170deg, rgba(219, 71, 2, 0.479) 0%, rgba(114, 111, 111, 0.521) 100%);
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: none;
+    
+}
+
+
+.baniere h1{
+    font-size: 20px;
+    margin-left: 5px;
+    font-family: 'Torus Notched';
+}
+
+.baniere img{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.droite p{
+    font-size: 8px;
+    float: right;
+    color: rgb(95, 226, 215);
+  
+}
+
+
+/* SLIDEE */
+
+  
+   .slide img{
+      object-fit: cover;
+      height: 40vh;
+    }
+    /* saissie */
+
+    header .trouver{
+       background-color: rgba(230, 84, 17, 0.911);
+       position: absolute   ; 
+       z-index: 1;
+       width: 80%;
+       flex-wrap: wrap;
+       top: 36vh;
+       padding: 10px;
+       height: 80px;
+       border: 1px solid rgba(13, 235, 224, 0.171);
+      box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.651);
+    }
+    
+    .trouver form{
+      width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .trouve input{
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 1px solid rgb(95, 226, 215);
+        font-size: 8px;
+
+        
+    }
+
+    .trouve input:hover{
+        border: 1px solid black;
+    }
+
+
+    .trouve {
+        margin: 0 5px;
+        /* background-color: #2c3442; */
+    }
+
+    .trouve label{
+        font-size: 8px;
+        margin-bottom: 5px;
+       
+    }
+
+    /* bouton saisie */
+
+    .btn{
+       width: 100%;
+        height: 20px;
+        border:1px solid  rgb(95, 226, 215);
+        font-size: 10px;
+      
+        margin-top: 15px
+        
+            
+    }
+    .btn:hover{
+      
+        font-size: 10px;
+    }
+  
+    
+    .btn::before{
+      
+        width: 100%;
+        height: 20px;
+        font-size: 8px;
+            
+    }
+
+    
+    .btn:hover::before{
+        border: none;
+        font-size: 10px;
+  
+    }
+    
+    
+     .btn i{
+       display: none;
+    }
+    
+    /* ---------------Sesction1 ---------------------- */
+   
+  
+   
+        
+    /* SECTION 1 */
+
+    .section1{
+      padding-top: 10px 0;
+      margin-top: 50px;
+      
+   }
+
+   /* DIV 1 DE LA SECTION1 */
+ section .sec1{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 90%;
+ margin: 0 auto;
+
+}
+
+/* article DU DIVE SEC1 */
+
+section .article1{ 
+  width: 40%;
+  height: 20vh;
+  border-radius:70px;
+  background-color: #2c3442;
+  margin-bottom: 25px;
+
+   }
+
+   /* ARTICLE HOVER */
+
+.article1 img:hover{
+  transform: scale(1.1);
+  border-radius: 50px;
+  transition: all .3s ease;
+  box-shadow: 0px 0px 20px 1px rgb(0, 0, 0);
+}
+
+.sec1 h1{
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+
+
+.sec1 img{
+  width: 100%;
+  height: 20vh;
+  border-radius: 60px; 
+  box-shadow: 5px 5px 15px  rgba(230, 84, 17, 0.911);
+}
+
+
+/* description */
+
+.description span{
+  color:rgb(95, 226, 215);
+}
+
+.description{
+  
+  font-size: 15px;
+  color:  black;
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  
+}
+
+
+/* ----------------------SECTION 2------------ */
+
+.section2 h1{
+   color:black ;
+   font-size: 25px
+}
+
+
+.section2 .sec2{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   width: 90%;
+   margin: 0 auto;
+   justify-content: center;
+
+}
+
+
+/* items */
+
+.sec2 .items{
+  
+   width: 42%;
+   height: 250px;
+   margin: 15px 10px;
+   border-radius: 30px;
+   transition: all .3s;
+
+}
+
+/* hover items */
+
+.items:hover{
+   transform: scale(0.98);
+border-radius: 10px;
+box-shadow: 0px 0px 20px 1px rgb(201, 55, 18);
+}
+
+/* image items */
+
+.items img{
+   width: 100%;
+   height: 60%;
+   object-fit: cover;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   
+   
+}
+
+/* info items */
+
+.items .info-items{
+width: 100%;
+height: 40%;
+background-color:rgba(233, 233, 233, 0.829);
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+}
+
+/* car  (marque , puissance , modele*/
+
+.info-items .cars{   
+   display: flex;
+   height: 40%;
+   justify-content: center;
+  
+   
+
+}
+
+/* pour chacun d'eux dic puissance modele et marque */
+
+.cars .car{
+   width: 40%;
+   height: 100%;
+   
+
+}
+
+.car .entete{
+   font-size: 10px;
+   margin: 5px 0;
+   font-weight: 300;
+   
+  
+
+}
+.car p{
+  font-size: 8px;
+  
+}
+
+/* valider avec prix et bouton louer */
+
+
+.valider{
+   padding: 5px;
+   height: 60%;
+ 
+}
+
+.valider p{
+font-size: 12px;
+margin-bottom:5px ;
+
+}
+/* boutton louer   */
+
+.achat{
+   width: 70%;
+   height: 40%;
+   font-weight: 500;
+   font-size: 8px;
+    
+}
+
+.achat:hover{
+   background-color:  #eb6111;
+   color: rgba(20, 20, 18, 0.897);
+  
+}
+
+/* prix */
+
+.prix{
+  font-size: 10px;
+   color: rgba(230, 84, 17, 0.911);;
+}
+
+
+/* ------------------Section3----------------- */
+
+
+
+
+.section3{
+  height: 100%;
+  /* margin-bottom: 100px; */
+  
+ }
+
+ .section3 h1{
+    color:black ;
+    font-size: 25px;
+    margin: 10px;
+    
+ }
+
+
+.section3 .sec3{
+    
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  
+
+}
+
+/* aside bloque gauche pour une prensation et description */
+
+.aside{
+  margin: 10px auto;
+  width: 90%;
+  height: 150px;
+  border-radius: 30px;
+  box-shadow: 0px 10px 18px #2c3442;
+}
+
+
+.aside-logo{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+}
+.aside-logo img{
+  width: 30px;
+  height: 30px;
+}
+
+.aside-logo a{
+  margin-left: 5px;
+  color: black;
+}
+
+.aside p{
+  width: 80%;
+  margin: 10px auto;
+  line-height: 16px;
+  font-size: 10px;
+  color: white;
+ 
+}
+
+
+.pack{
+  margin: 50px 0 ;
+  justify-content: space-around;
+  width:100%;
+  flex-wrap: wrap;
+  
+}
+
+/*  bloque de chaque pack premium bussines et eco */
+
+
+.container {
+
+  margin: 30px 0;
+ 
+
+}
+
+.card_box {
+  
+  width: 160px;
+  height: 260px;
+  border-radius: 20px;
+ 
+
+}
+
+
+
+.card_box span {
+  width: 60px;
+  height: 70px;
+  top: -5px;
+  left: -5px;
+  font-size: 8px;
+}
+
+/* premium */
+
+.card_box .span1::before {
+ 
+  width: 150%;
+  height: 50px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+/* busness */
+
+  
+.card_box .span2::before {
+  
+  width: 150%;
+  height: 50px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+
+}
+
+/* ECON */
+
+  
+.card_box .span3::before {
+  width: 150%;
+  height: 50px;
+  font-weight: 300;
+
+}
+
+
+.card_box span::after {
+ 
+  width: 5px;
+  height: 10px;
+ 
+}
+
+
+/* contenu du pack */
+
+
+
+/* CONTENU DU PACK */
+
+.content {
+  padding: 10px;
+  
+}
+
+
+/* prix des  pack */
+
+.content .price {
+  color: white;
+  font-weight: 600px;
+  font-size: 15px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* contenu contenant les trois Option */
+
+
+.content .description {
+  color: rgba(255, 255, 255, 0.719);
+  margin-top: 0px;
+  font-size: 10px;
+  line-height: 10px;
+ 
+
+}
+
+/* descrip dic des 3  */
+
+.description .descrip{
+ 
+  display: flex;
+  width:  100%;
+  flex-direction: column;
+ 
+
+
+}
+
+
+/* offre div de chaque option */
+
+.descrip .offre{
+  
+  margin: 5px 0;
+  width: 100%;
+
+  
+}
+
+/* nom de l'option */
+
+.offre p{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+
+.offre .yes{
+  
+ color: green;
+  font-size: 12px;
+  
+ 
+}
+
+
+.offre .non{
+  color: red;
+  font-size: 12px;
+ 
+} 
+
+/* titre du pack */
+.content .title {
+  font-weight: 800;
+  margin-top: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+/* bouton du pack */
+.button-pack {  
+  font-weight: 400;
+  font-size:  10px;
+  padding: 0.1rem 1.2rem;
+  margin-bottom: 20px;
+  
+}
+
+
+/* -------------------SECTION 4------------- */
+
+
+
+
+.section4{
+  height: 100%;
+  padding-bottom: 0px ;
+ 
+ }
+
+ .section4 h1{
+    color:black ;
+    margin-bottom: 20px; 
+    font-size: 25px;
+    
+    
+ }
+
+
+.section4 .sec4{
+   background: linear-gradient(170deg, rgba(238, 80, 7, 0.623) 0%, rgba(32, 8, 8, 0.76) 100%);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  20px;
+    
+
+}
+
+
+
+/* formulaire */
+
+.sec4 .formulaire{
+  width: 80%;
+  background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow:1px 1px 10px 1px rgb(0, 0, 0);
+  height: 360px;
+
+
+}
+
+.formulaire h2{
+  font-size: 15px;
+  text-transform:uppercase ;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.formulaire .form{
+
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.formulaire form{
+  margin: 10px 0 auto ;
+  width: 100%;
+}
+
+
+
+.form input{
+  padding: 5px;
+  margin-top: 5px;
+ 
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.form input:hover{
+   border-color: rgb(231, 79, 8);
+   transform: scale();
+}
+
+.form label{
+  font-size: 10px;
+  color: #cdd7e7;
+  margin-bottom: 5px;
+  text-align: left;
+  
+}
+
+
+.formulaire .submit{
+  margin:10px 0 ;
+  padding:5px 30px;
+  font-size: 10px;
+ 
+}
+
+.submit:hover{
+  font-size: 12px;
+  transition: 0.5s ease;
+  
+}
+
+/* contact */
+
+.sec4 .carte{
+  
+  width: 80%;
+  height: 300px;
+  
+  
+}
+
+.carte iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+
+}
+
+/* --------------------------------section 5-------- */
+
+
+
+
+.section5{
+  height: 100%;
+  /* background-color: #cc3f47; */
+  padding:0 50px;
+  margin-bottom: 10px;
+  padding-bottom:10px ;
+  /* background: linear-gradient(45deg,rgba(155, 160, 159, 0.007), rgba(255, 81, 0, 0));; */
+
+ }
+
+ .section5 h1{
+    color:black ;
+    margin-bottom: 15px;
+    font-size: 25px;
+    
+ }
+
+
+ .sec5{
+  padding:0 20px;
+ }
+
+ .sec5 .propos{
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: 300;
+  line-height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+ 
+ }
+
+ .propos span{
+  color: #e43d13;
+ }
+
+
+ /* ----------------------Footer------------ */
+
+
+
+ footer{
+  background-color: #2c3442;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+padding: 10px 0;
+ }
+
+ footer .pied{
+  width:  70%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+ }
+
+
+ footer .footer-logo{
+  width: 40%;
+ 
+
+ }
+
+ .footer-logo img{
+  width: 20px;
+  height: 20px;
+ }
+
+ .footer-logo a{
+  font-size: 10px;
+  color: black;
+  margin-left: 5px;
+ }
+
+ /* div contenant les lien */
+
+ footer .lien{
+  width: 60%;
+  padding: 10px ;
+
+ }
+
+ footer p{
+  color: rgba(255, 255, 255, 0.685);
+  font-size: 10px;
+ }
+
+ .lien p{
+  text-align: center;
+  font-size: 10px;
+ }
+
+
+ .footer-icone{
+ 
+  width: 70%;
+  margin-top: 10px;
+ }
+
+ .footer-icone img{
+  width: 15px;
+  height: 15px;
+  margin: 5px 5px;
+ }
+
+
+
+
+
+}
+ 
+
+@media screen and (max-width:600PX){
+
+
+  /* ---------------------------bouton defilement en haut*/
+
+
+    .defilement {
+      width: 27px;
+      height: 27px;
+      background-color: rgba(241, 82, 33, 0.774);
+      top: 90vh;
+      right: 0;
+      margin-right:5px ;
+      border-radius: 5px;
+         
+    }
+       
+  
+    /* ---------------------------bouton defilement en haut*/
+
+
+/* login */
+
+
+
+nav .login{ 
+  height: 20px;
+  display: flex;
+  align-items: center;
+ 
+
+}
+
+nav .connect{
+  
+  font-size: 10px;
+  /* background-color: red; */ 
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+  padding: 0;
+  width: 45%;
+
+  
+}
+
+
+
+nav .inscrire{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 10px;
+   border: none;
+margin-left:5px ;
+  /* background-color: #704217; */
+
+}
+
+.menu-burgeur{
+  display: flex;
+  margin-left: 20px;
+  width: 25px;
+height: 50px;
+}
+
+
+
+    /* partie location */
+
+
+    .page-location.ouvert{
+      display: flex;
+    }
+    
+    .page-location{
+       position: fixed;
+       padding: 0px 0;
+       z-index: 100;
+       width: 100%;
+       height: 100vh;
+       display: none;
+       justify-content: center;
+       align-items: center;
+       background-color: #2c3442ea;
+       transition: 1.1s ease;
+       
+    }
+    
+    
+    
+    
+    .page-location .directive{
+      flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    background-color: rgba(219, 200, 200, 0);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    
+    
+    }
+    
+    /* croix */
+    
+    .directive .croix{
+      width: 25px;
+      height: 25px;
+      padding:2px;
+      background-color: rgb(214, 15, 15);
+      border-radius: 20px;
+      transition: 0.1s ease;
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    
+    
+    /* manipulation */
+    
+     .page-location .manipulation{
+      /* background-color: rgba(15, 6, 1, 0.164) ; */
+      background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+      width: 100%;
+      color: white;
+      height: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      
+    }
+    
+    /* photo */
+    
+    .manipulation .photo{
+      width:22% ;
+      margin-top: 5px;
+      height: 22%;
+     
+    }
+    .photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    /* info manu */
+    
+    .infomanu{
+     
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    
+    .infomanu .prix{
+      font-size: 12px;
+    color: rgb(224, 114, 24);
+    }
+    
+    .infomanu .cars{
+     
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+    }
+    
+    .infomanu .car {
+     color: rgb(224, 99, 26);
+     font-size: 12px;
+    }
+
+   
+    .infomanu .car{
+      text-align: center;
+    }
+    
+    .infomanu .car p{
+      color:rgba(255, 255, 255, 0.932) ;
+      font-weight: 100;
+    }
+    
+    /* ajuster la location */
+    
+    .manipulation .ajuster{
+    
+      width: 90%;
+      margin: 10px 0;
+     padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: #2c3442;
+    }
+    
+    
+    .ajuster .ajuste{
+       padding: 5px 10px;
+       background-color: beige;
+       color: white;
+     
+    }
+    
+    .ajuste img{
+      width: 10px;
+      height: 10px;
+      object-fit: cover;
+    }
+    
+    .nombrejour{
+    
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    }
+    
+    /* formulaire du loc */
+    
+    /* message d'alerte a la soumission */
+    .form-location .succer{
+      /* background-color: white; */
+      color: rgb(15, 255, 15);
+      font-size: 12px;
+      display: none;
+    
+    }
+    .form-location .succer.val{
+      display: flex;
+    }
+    
+    .succer1{
+      /* background-color: white; */
+      color: rgb(15, 255, 15);
+      font-size: 12px;
+      display: none;
+      margin:  0 20% auto;
+    
+    
+    }
+    .succer1.val1{
+      display: flex;
+    }
+    
+    .form-location{
+     
+      background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+      width: 100%;
+      height: 40%;
+      padding: 10px;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 1px 1px 5px 1px rgba(32, 30, 30, 0.836);
+    
+    
+    }
+    
+    .form-location h2{
+      text-align: center;
+      font-size: 12px;
+      margin: 5px 0;
+      color: rgba(255, 255, 255, 0.959);
+    }
+    
+    .form-location form{
+     
+      
+      width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .loc{
+      /* background-color: gold; */
+      margin: 2px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .loc input{
+      padding: 5px 25px;
+      text-align: center;
+      background-color: transparent;
+      outline: none;
+      color: white;
+      margin-top: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+      border: 1px solid rgba(236, 106, 0, 0.822);
+    }
+    
+    .loc label{
+      font-size: 10px;
+      color: #e2deccf1;
+      margin-bottom: 2px;
+    }
+    
+    .loc ::placeholder {
+      color: rgba(236, 236, 236, 0.664);
+    }
+    
+    .submit-loc{
+      margin: 5px 0;
+      padding: 5px 40px;
+      background-color: rgba(219, 114, 16, 0.863);
+      outline: none;
+      border: none;
+      color:rgba(255, 255, 255, 0.664)
+      
+    }
+    
+    .submit-loc:hover{
+      background: #2c3442;
+      color: beige;
+    }
+   
+      /* fin partie location */
+
+      /* SECTION 1  */
+
+      .sec1 h1{
+        font-size: 17px;
+      }
+      .description{
+    
+        font-size: 18px;
+        color:  black;
+        margin: 20px auto;
+        line-height: 25px;
+        width: 80%;
+        text-align: center;
+        
+    }
+
+
+
+    
+/* contenu du pack */
+
+
+
+/* CONTENU DU PACK */
+
+.content {
+  padding: 0px;
+  height: 80%;
+  padding: 10px 0;
+  
+}
+
+
+/* prix des  pack */
+
+.content .price {
+  color: white;
+  font-weight: 600px;
+  font-size: 15px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* contenu contenant les trois Option */
+
+
+.content .description {
+  color: rgba(255, 255, 255, 0.719);
+  margin-top: 0px;
+  font-size: 10px;
+  line-height: 10px;
+ 
+
+}
+
+/* descrip dic des 3  */
+
+.description .descrip{
+ 
+  display: flex;
+  width:  100%;
+  flex-direction: column;
+
+}
+
+
+/* offre div de chaque option */
+
+.descrip .offre{
+  
+  margin: 5px 0;
+  width: 100%;
+
+}
+
+/* nom de l'option */
+
+.offre p{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+
+.offre .yes{
+  
+ color: green;
+  font-size: 12px;
+  
+ 
+}
+
+
+.offre .non{
+  color: red;
+  font-size: 12px;
+ 
+} 
+
+/* titre du pack */
+.content .title {
+  font-weight: 800;
+  margin: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+/* bouton du pack */
+.button-pack {  
+  font-weight: 400;
+  font-size:  10px;
+  padding: 0.1rem 1.2rem;
+  margin-bottom: 20px;
+  
+}
+
+.section5{
+  margin-bottom: 0;
+  box-shadow: 1px 1px 5px 2px rgba(192, 57, 17, 0.61);
+
+}
+
+    
+
+}
+
+/*----------------------------------------------------------------------- resolution au dessu de 400 px----------------------------------- */
+
+@media screen and (max-width:450PX){
+
+
+  /* ---------------------------bouton defilement en haut*/
+
+
+    .defilement {
+      width: 27px;
+      height: 27px;
+      background-color: rgba(241, 82, 33, 0.774);
+      top: 90vh;
+      right: 0;
+      margin-right:5px ;
+      border-radius: 5px;
+         
+    }
+       
+  
+    /* ---------------------------bouton defilement en haut*/
+
+
+/* login */
+
+
+
+nav .login{ 
+  height: 20px;
+  display: flex;
+  align-items: center;
+ 
+
+}
+
+nav .connect{
+  
+  font-size: 10px;
+  /* background-color: red; */ 
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+  padding: 0;
+  width: 45%;
+
+  
+}
+
+
+
+nav .inscrire{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 10px;
+   border: none;
+margin-left:5px ;
+  /* background-color: #704217; */
+
+}
+
+.menu-burgeur{
+  display: flex;
+  margin-left: 20px;
+  width: 25px;
+height: 50px;
+}
+
+
+
+    /* partie location */
+
+
+    .page-location.ouvert{
+      display: flex;
+    }
+    
+    .page-location{
+       position: fixed;
+       padding: 0px 0;
+       z-index: 100;
+       width: 100%;
+       height: 100vh;
+       display: none;
+       justify-content: center;
+       align-items: center;
+       background-color: #2c3442ea;
+       transition: 1.1s ease;
+       
+    }
+    
+    
+    
+    
+    .page-location .directive{
+      flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    background-color: rgba(219, 200, 200, 0);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    
+    
+    }
+    
+    /* croix */
+    
+    .directive .croix{
+      width: 25px;
+      height: 25px;
+      padding:2px;
+      background-color: rgb(214, 15, 15);
+      border-radius: 20px;
+      transition: 0.1s ease;
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    
+    
+    /* manipulation */
+    
+     .page-location .manipulation{
+      /* background-color: rgba(15, 6, 1, 0.164) ; */
+      background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+      width: 100%;
+      color: white;
+      height: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      
+    }
+    
+    /* photo */
+    
+    .manipulation .photo{
+      width:22% ;
+      margin-top: 5px;
+      height: 22%;
+     
+    }
+    .photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    /* info manu */
+    
+    .infomanu{
+     
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    
+    .infomanu .prix{
+      font-size: 12px;
+    color: rgb(224, 114, 24);
+    }
+    
+    .infomanu .cars{
+     
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+    }
+    
+    .infomanu .car {
+     color: rgb(224, 99, 26);
+     font-size: 12px;
+    }
+
+   
+    .infomanu .car{
+      text-align: center;
+    }
+    
+    .infomanu .car p{
+      color:rgba(255, 255, 255, 0.932) ;
+      font-weight: 100;
+    }
+    
+    /* ajuster la location */
+    
+    .manipulation .ajuster{
+    
+      width: 90%;
+      margin: 10px 0;
+     padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: #2c3442;
+    }
+    
+    
+    .ajuster .ajuste{
+       padding: 5px 10px;
+       background-color: beige;
+       color: white;
+     
+    }
+    
+    .ajuste img{
+      width: 10px;
+      height: 10px;
+      object-fit: cover;
+    }
+    
+    .nombrejour{
+    
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    }
+    
+    /* formulaire du loc */
+    
+    /* message d'alerte a la soumission */
+    .form-location .succer{
+      /* background-color: white; */
+      color: rgb(15, 255, 15);
+      font-size: 12px;
+      display: none;
+    
+    }
+    .form-location .succer.val{
+      display: flex;
+    }
+    
+    .succer1{
+      /* background-color: white; */
+      color: rgb(15, 255, 15);
+      font-size: 12px;
+      display: none;
+      margin:  0 20% auto;
+    
+    
+    }
+    .succer1.val1{
+      display: flex;
+    }
+    
+    .form-location{
+     
+      background: linear-gradient(170deg, rgba(219, 2, 2, 0.623) 0%, rgb(31, 31, 31) 100%);
+      width: 100%;
+      height: 40%;
+      padding: 10px;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 1px 1px 5px 1px rgba(32, 30, 30, 0.836);
+    
+    
+    }
+    
+    .form-location h2{
+      text-align: center;
+      font-size: 12px;
+      margin: 5px 0;
+      color: rgba(255, 255, 255, 0.959);
+    }
+    
+    .form-location form{
+     
+      
+      width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .loc{
+      /* background-color: gold; */
+      margin: 2px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .loc input{
+      padding: 5px 25px;
+      text-align: center;
+      background-color: transparent;
+      outline: none;
+      color: white;
+      margin-top: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+      border: 1px solid rgba(236, 106, 0, 0.822);
+    }
+    
+    .loc label{
+      font-size: 10px;
+      color: #e2deccf1;
+      margin-bottom: 2px;
+    }
+    
+    .loc ::placeholder {
+      color: rgba(236, 236, 236, 0.664);
+    }
+    
+    .submit-loc{
+      margin: 5px 0;
+      padding: 5px 40px;
+      background-color: rgba(219, 114, 16, 0.863);
+      outline: none;
+      border: none;
+      color:rgba(255, 255, 255, 0.664)
+      
+    }
+    
+    .submit-loc:hover{
+      background: #2c3442;
+      color: beige;
+    }
+   
+      /* fin partie location */
+
+      /* SECTION 1  */
+
+      .sec1 h1{
+        font-size: 17px;
+      }
+      .description{
+    
+        font-size: 18px;
+        color:  black;
+        margin: 20px auto;
+        line-height: 25px;
+        width: 80%;
+        text-align: center;
+        
+    }
+
+
+
+    
+/* contenu du pack */
+
+
+
+/* CONTENU DU PACK */
+
+.content {
+  padding: 0px;
+  height: 80%;
+  padding: 10px 0;
+  
+}
+
+
+/* prix des  pack */
+
+.content .price {
+  color: white;
+  font-weight: 600px;
+  font-size: 15px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+/* contenu contenant les trois Option */
+
+
+.content .description {
+  color: rgba(255, 255, 255, 0.719);
+  margin-top: 0px;
+  font-size: 10px;
+  line-height: 10px;
+ 
+
+}
+
+/* descrip dic des 3  */
+
+.description .descrip{
+ 
+  display: flex;
+  width:  100%;
+  flex-direction: column;
+
+}
+
+
+/* offre div de chaque option */
+
+.descrip .offre{
+  
+  margin: 5px 0;
+  width: 100%;
+
+}
+
+/* nom de l'option */
+
+.offre p{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+
+.offre .yes{
+  
+ color: green;
+  font-size: 12px;
+  
+ 
+}
+
+
+.offre .non{
+  color: red;
+  font-size: 12px;
+ 
+} 
+
+/* titre du pack */
+.content .title {
+  font-weight: 800;
+  margin: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+/* bouton du pack */
+.button-pack {  
+  font-weight: 400;
+  font-size:  10px;
+  padding: 0.1rem 1.2rem;
+  margin-bottom: 20px;
+  
+}
+
+.section5{
+  margin-bottom: 0;
+  box-shadow: 1px 1px 5px 2px rgba(192, 57, 17, 0.61);
+
+}
+
+    
+
+}

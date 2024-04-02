@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="https://db.onlinewebfonts.com/c/6aa06a9a432b8417171f60d8351aa310?family=Torus+Notched"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="website icon" type="svg" href="/Src/Icone/ceinture-de-securite.png">
+        <script src="https://kit.fontawesome.com/0c87a70838.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Car_Send</title>
+
+
+</head>
+<body>
+
+<!-- bouton de defilement en haut  -->
+
+<div class="defilement" id="up">
+    <img src="/Src/Icone/arrow-up-circle-outline.svg" alt="" srcset="">
+</div>
+          <!-- page location  -->
+          <div class="page-location ">
+            <div class="directive">
+                <div class="manipulation">
+                    <div class="photo" >
+                     <img src="/Src/Images/finalisé.jpg" alt="" srcset="">
+                   </div>
+                   <div class="infomanu">
+                        <div class="cars">
+
+                            <div class="car">
+                                <p class="entete">Marque</p>
+                                <p id="marqueCar">Neant</p>
+                            </div>
+                            <div class="car">
+                                <p class="entete">Modele</p>
+                                <p id="modeleCar">Neant</p>
+                            </div>
+                            <div class="car">
+                                <p class="entete">Puissance</p>
+                                <p id="puissanceCar">verifier</p>
+                            </div>
+                      </div> 
+                      <p class="prix">PRIX : <span id="prixCar">0</span></p>
+                   </div>
+                      
+                   <div class="ajuster">
+                    
+                     <button title="addition" class="ajuste" id="add" >
+                        <img src="/Src/Icone/plus-solid.svg" alt="" srcset="">
+                     </button>
+                     <div class="nombrejour">
+                        <p>Nombre de jour</p>
+                        <p class="total" id="totalPrice">0</p>
+                     </div>
+                     <button title="Diminution" class="ajuste" id="dim">
+                        <img src="/Src/Icone/minus-solid.svg" alt="">
+                     </button>
+                   </div>
+                </div>
+
+                <div class="form-location">
+                    <h2>Remplie le formulaire de location</h2>
+                    <p class="succer" id="succer">Formulaire bien envoyer !</p>
+                    <form action="" id="location"> 
+                        <div class="loc">
+                            <label for="">Numero permis</label>
+                            <input type="nombre" id="permis" placeholder="xxxxxxxxxxx">
+                        </div>
+                        <div class="loc">
+                            <label for="">Date d'expiration</label>
+                            <input type="datetime" id="date" placeholder="j/m/annee">
+                        </div>
+                        <div class="loc">
+                            <label for="">Region</label>
+                            <input type="text" id="region" placeholder="Region">
+                        </div>
+                        <div class="loc">
+                            <label for="">Téléphone</label>
+                            <input type="nombre" id="telephone" placeholder="+221xxx.xx.xx">
+                        </div>
+                        <input class="submit-loc" type="submit" placeholder="ENVOYER">
+                    </form>
+                   </div>
+                   <img class="croix" src="/Src/Icone/ciblage-croise.png" alt="">
+                  
+            </div>
+         </div>
+
+<!-- fin  page location  -->
+
+
+    <!-- nav bar -->
+
+ <nav >
+    <div class="logo">
+       <img src="/Src/Icone/ceinture-de-securite.png" alt="" srcset="">
+       <a href="">🅲🅰🆁 🆂🅴🅽🅳</a> 
+   </div>
+
+  
+       <div class="navlink">
+           <ul>
+               <li><a class="home" href="#">Accueil</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <li><a href="#propos">A Propos</a></li>
+           </ul>
+       </div>
+       
+       <div class="login">
+           <a href="" class="connect">Se Connecter</a>
+           <a href="" class="inscrire">S'inscrire</a>
+           <img  class="menu-burgeur" src="/Src/Icone/menu-outline.svg" alt="" srcset="">
+       </div>
+   
+   
+   
+
+  </nav>
+   
+     <header>
+
+ 
+
+        <!-- slide -->
+        <div class="slider">
+           
+                <!-- baniere -->
+                <div class="baniere">
+                   <div class="gauche">
+                    <img src="/Src/Icone/ceinture-de-securite.png" alt="" srcset="">
+                   </div>
+                   <div class="droite">
+                    <h1>🅲🅰🆁 🆂🅴🅽🅳</h1>
+                    <p>LOUER UNE VOITURE FACILEMENT</p>
+                   </div>
+                   
+                </div>
+
+            <div class="slides">
+               
+                <div class="slide"><img src="/Src/Images/photo7.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo8.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo9.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo10.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo11.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo12.jpg" alt="" srcset=""></div>
+                <div class="slide"><img src="/Src/Images/photo13.jpg" alt="" srcset=""></div>
+            </div>
+        </div>
+
+         <!-- zone de saissie -->
+         <div class="trouver">
+            <form action="">
+                <div class="trouve">
+                    <label for="">Marque</label>
+                    <input type="text" name="" id="" placeholder="Marque">
+                </div>
+                <div class="trouve">
+                    <label for="">Modele</label>
+                    <input type="text" name="" id="" placeholder="Modele">
+                </div>
+                <div class="trouve">
+                    <label for="">Localité</label>
+                    <input type="text" name="" id="" placeholder="Localité">
+                </div>
+                <div class="trouve">
+                    <button class="btn" type="button">Verifier<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></button>
+                </div>
+            </form>
+       </div>
+        
+     </header>
+
+     <!-- ---------------------SECTION 1--------------------- -->
+
+     <section class="section1">
+      
+        <div class="sec1">
+           <div class="article1">
+            <img src="/Src/Images/profil 3.jpg" alt="" srcset="">
+          </div>
+           <h1>Un service special pour nos clients</h1>
+        </div>
+        
+        <div class="sec1">
+            <h1>Vous serez satifait</h1>
+            <div class="article1">
+             <img src="/Src/Images/profil 1.jpg" alt="" srcset="">
+           </div>
+          
+         </div>
+          
+         <P class="description"><span>CAR-SEND </span>Vous permet de louer une voiture en toute securité  <br> Notre service en ligne vous aide à choisir ce que vous desirer <br>Visiter notre galerie de voiture et faite votre choix 
+        </P>
+       <img class="fleche" src="/Src/Icone/arrow-down-outline.svg" alt="" srcset="">
+
+     </section>
+
+      <!-- ---------------------SECTION 2   GALERIE--------------------- -->
+        
+
+     <section class="section2">
+        
+        <h1>Galerie de voiture</h1>
+        <div class="sec2">
+
+
+          <div class="items">
+                <img src="/Src/Images/photo7.jpg" alt="" srcset="">
+                <div class="info-items">
+                   <div class="cars">
+                        <div class="car">
+                            <p class="entete">Marque</p>
+                            <p>Ferrari</p>
+                        </div>
+                        <div class="car">
+                            <p class="entete">Modele</p>
+                            <p>812 superfast</p>
+                        </div>
+                        <div class="car">
+                            <p class="entete">Puissance</p>
+                            <p>812 cv</p>
+                        </div>
+                   </div> 
+                   <div class="valider">
+                    <p><span class="prix">PRIX</span> : 300.000 cfa/jr</p>
+                    <button class="achat" onclick="car(1)" >LOUER</button>
+                </div> 
+                </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo8.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Farrari</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>812 superfast</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>812 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 300.000 cfa/jr</p>
+                <button class="achat" onclick="car(2)" >LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo9.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Farrari</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>812 superfast</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>812 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 300.000 cfa/jr</p>
+            <button class="achat" onclick="car(3)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo10.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Audi</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>RS6</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>450 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 250.000 cfa/jr</p>
+                <button class="achat" onclick="car(4)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo11.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Mercedes</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>Marco polo</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>350 cv</p>
+                    </div>
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 200.000 cfa/jr</p>
+                <button class="achat" onclick="car(5)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo12.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Aston Martin</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>DBX</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>620 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 280.000 cfa/jr</p>
+                <button class="achat" onclick="car(6)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo13.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Lamborguini</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>Urus</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>700 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 280.000 cfa/jr</p>
+                <button class="achat" onclick="car(7)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo14.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Rolls Royce</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>Ghost</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>550 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 350.000 cfa/jr</p>
+                <button class="achat" onclick="car(8)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo15.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Nissan</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>GTR</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>460 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 300.000/jr cfa</p>
+                <button class="achat" onclick="car(9)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo16.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>BMW</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>X7</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>650 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 220.000 cfa/jr</p>
+                <button class="achat" onclick="car(10)">LOUER</button>
+            </div>
+                
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo17.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Toyota</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>Rav4</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>200 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 100.000 cfa/jr</p>
+                <button class="achat"  onclick="car(11)">LOUER</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo18.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Cadillac </p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>Escalade</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>520 cv</p>
+                    </div>
+               
+    
+               </div> 
+                <div class="valider">
+                    <p><span class="prix">PRIX</span> : 200.000 cfa/fr</p>
+                    <button class="achat" onclick="car(12)">LOUER</button>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo19.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>BMW</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>S8 COUPE</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>500 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 280.000 cfa/jr</p>
+                <button class="achat" onclick="car(13)">LOUER</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo20.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Mercedes</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>S63 AMG</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>600 cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 250.000 cfa/jr</p>
+                <button class="achat"  onclick="car(14)">LOUER</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="items">
+            <img src="/Src/Images/photo21.jpg" alt="" srcset="">
+            <div class="info-items">
+                <div class="cars">
+
+                    <div class="car">
+                        <p class="entete">Marque</p>
+                        <p>Mercedes</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Modele</p>
+                        <p>C63 AMG</p>
+                    </div>
+                    <div class="car">
+                        <p class="entete">Puissance</p>
+                        <p>560cv</p>
+                    </div>
+               
+               
+               </div> 
+
+               <div class="valider">
+                <p><span class="prix">PRIX</span> : 270.000 cfa</p>
+                <button class="achat"  onclick="car(15)">LOUER</button>
+            </div>
+            </div>
+        </div>
+          
+        </div>
+        <img class="fleche" src="/Src/Icone/arrow-down-outline.svg" alt="" srcset="">
+     </section>
+
+     <!-- -----------------------------SECTION 3 PACK-------------------------- -->
+
+     <section class="section3">
+        <h1>PACK LOCATION</h1>
+        <div class="sec3">
+
+                <div class="aside">
+                    <div class="aside-logo">
+                        <img src="/Src/Icone/ceinture-de-securite.png" alt="" srcset="">
+                        <a href="http:">🅲🅰🆁 🆂🅴🅽🅳</a> 
+                    </div>
+                    <p>
+                            CAR SEND est un site de location de voiture qui offre une gamme de services à ses clients.
+                            Le site propose différentes formules (pack) de location de voitures pour répondre aux besoins et
+                            aux budgets des client
+                    </p>
+                </div>
+
+                <div class="pack">
+                    <div class="container">
+                        
+                        <div class="card_box">
+                           
+                                        <div class="content">
+                                            <div class="title">PREMIUM</div>
+                                            <div class="price">200.000 cfa</div>
+                                            <div class="description">
+
+                                                 <div class="descrip">
+                                                        <div class="offre">
+                                                            <P>Livraison a Domicile</P>
+                                                            <p class="yes">Oui</p>
+                                                        </div>
+
+                                                        <div class="offre">
+                                                            <p>Plein de carburant</p>
+                                                            <p class="yes">Oui</p>
+                                                        </div>
+
+                                                        <div class="offre">
+                                                            <p>Chauffeur</p>
+                                                            <p class="yes">Oui</p>
+
+                                                        </div>
+                                                  </div>
+                                               
+                                            </div>     
+                                        </div>
+                                  <button class="button-pack">
+                                    Ajouter à la location
+                                  </button>
+                            <span class="span1"></span>
+                        </div>
+                    </div>
+                    <div class="container">
+                                <div class="card_box">
+                                            <div class="content">
+                                                <div class="title">BUSINESS</div>
+                                                <div class="price">150.000 cfa</div>
+                                                <div class="description">
+                                                    <div class="descrip">
+                                                        <div class="offre">
+                                                            <P>Livraison a Domicile</P>
+                                                            <p class="yes">Oui</p>
+                                                        </div>
+
+                                                        <div class="offre">
+                                                            <p>Plein de carburant</p>
+                                                            <p class="yes">Oui</p>
+                                                        </div>
+
+                                                        <div class="offre">
+                                                            <p>Chauffeur</p>
+                                                            <p class="non">Non</p>
+                                                         </div>
+                                                    
+                                                    </div>
+                                            </div>
+                                              
+                                        </div>
+                                        <button class="button-pack">
+                                            Ajouter à la location
+                                        </button >
+                                    <span class="span2"></span>
+                                </div>
+                    
+                   </div>
+                    <div class="container">
+                        <div class="card_box">
+                                    <div class="content">
+                                                <div class="title">ECO</div>
+                                                <div class="price"> 100.000 cfa</div>
+                                                <div class="description">
+                                                    <div class="descrip">
+                                                            <div class="offre">
+                                                                <P>Livraison a Domicile</P>
+                                                                <p class="yes">Oui</p>
+                                                            </div>
+
+                                                            <div class="offre">
+                                                                <p>Plein de carburant</p>
+                                                                <p class="non">Non</p>
+                                                            </div>
+
+                                                            <div class="offre">
+                                                                <p>Chauffeur</p>
+                                                                <p class="non">Non</p>
+                                                            </div>
+                                                   
+                                                    </div>
+                                            </div>
+                                              
+                                </div>
+                                <button class="button-pack">
+                                    Ajouter à la location
+                                </button>
+                                <span class="span3"></span>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+        <img class="fleche" src="/Src/Icone/arrow-down-outline.svg" alt="" srcset="">
+     </section>
+
+     <!-- --------------------------SECTION 4 CONTACT -------------------------->
+
+     <section class="section4" id="contact">
+        <h1>CONTACT
+        </h1>
+        <div class="sec4">
+            <div class="carte" >
+                <iframe  title="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.60919672524!2d-16.929650125898316!3d14.791029072387994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1bff7c6901bd3%3A0x5d8eb3c255f3b49e!2sCADIOR%20GLACE!5e0!3m2!1sfr!2ssn!4v1683312008873!5m2!1sfr!2ssn"></iframe>
+            </div>
+           <div class="formulaire">
+            <p class="succer1 " id="succer1">Formulaire bien envoyer !</p>
+            <h2>formulaire</h2>
+            <form action="" id="myForm">
+                <div class="form">
+                    <label for="">Nom</label>
+                    <input type="text" id="nom" placeholder="nom">
+                </div>
+                <div class="form">
+                    <label for="">Prenom</label>
+                    <input type="text" id="prenom" placeholder="prenom">
+                </div>
+                <div class="form">
+                    <label for="">Email</label>
+                    <input type="mail" id="email" placeholder="Exemple@xxx.xxx">
+                </div>
+                <div class="form">
+                    <label for="">Téléphone</label>
+                    <input type="nombre" id="phone" placeholder="+221 xxx.xx.xx">
+                </div>
+                <input class="submit" type="submit" placeholder="ENVOYER">
+            </form>
+            
+           </div>
+
+           
+        </div>
+        <img class="fleche" src="/Src/Icone/arrow-down-outline.svg" alt="" srcset="">
+     </section>
+
+     <section class="section5" id="propos">
+        <h1>A Propos</h1>
+        <div class="sec5">
+            <P class="propos">
+                Bienvenue sur <span>car-send</span> <br> notre plateforme en ligne de location de voitures qui simplifie votre expérience de location de voiture. <br> Nous croyons que la location de voitures devrait être facile et accessible à tous, c'est pourquoi nous avons créé Car Send.<br>
+                Notre objectif est de fournir un service de location de voitures de qualité à des prix abordables pour répondre aux besoins de tous nos clients. <br> Nous offrons une gamme de voitures de haute qualité pour répondre à tous les besoins de location, que ce soit pour une courte ou une longue durée.<br>
+                Chez Car Send, nous sommes déterminés à offrir une expérience de location de voitures simple et facile à utiliser.<br>  Notre plateforme en ligne est conçue pour vous permettre de louer une voiture rapidement et en toute sécurité, depuis n'importe où et à tout moment. <br>
+                Nous sommes fiers de notre équipe dévouée et expérimentée qui est prête à répondre à toutes vos questions et à vous aider à trouver la voiture qui répond le mieux à vos besoins. <br> Nous sommes également engagés à maintenir nos voitures en excellent état pour vous garantir une expérience de conduite agréable et sûre. <br>
+                Merci de nous faire confiance pour vos besoins de location de voitures. <br> Nous sommes impatients de vous aider à trouver la voiture parfaite pour votre prochaine aventure.
+             </p>
+        </div>
+     </section>
+
+
+     <!-- ----------------------footer (pied de page)---------------- -->
+     <footer>
+        <div class="pied">
+            <div class="footer-logo">
+                <img src="/Src/Icone/ceinture-de-securite.png" alt="" srcset="">
+                <a href="http:">🅲🅰🆁 🆂🅴🅽🅳</a> 
+            </div>
+            <div class="lien">
+                <p>Vous pouvez aussi nous contacter sur les réseaux sociaux</p>
+                <div class="footer-icone">
+                    <img src="/Src/Icone/facebook.png" alt="" srcset="">
+                    <img src="/Src/Icone/instagram.png" alt="" srcset="">
+                    <img src="/Src/Icone/whatsapp.png" alt="" srcset="">
+                    <img src="/Src/Icone/youtube.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+        <p>   © www.Car-Send.sn 2023 Diéne Thiam (78 581 57 82)</p>
+     </footer>
+     
+    
+
+    <script src="/javascript/script.js">
+        // reste cette partie
+    </script>
+</body>
+</html>
